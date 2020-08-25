@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "git-hub-199": {
+      "hosting": {
+        "github-login-firebase": [
+          "git-hub-199"
+        ]
+      }
+    }
+  }
+}

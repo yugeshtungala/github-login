@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   <a class="navbar-band" [routerLink]="['/']" routerLinkActive="router-link-active" >
+       <img src="../../../assets/img.png" width="30" height="30">
+       LCO github finder app
+   </a>
+   <div class="navbar-collapse">
+        <div class="navbar-nav ml-auto">
+            <div *ngIf="email" class="navbar-text float-left">
+                 {{email}}
+            </div>
+            <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+            <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signin']" routerLinkActive="router-link-active" >signIn</a>
+            <a *ngIf="!email" class="nav-item nav-link" [routerLink]="['/signup']" routerLinkActive="router-link-active" >SignUp</a>
+            <a *ngIf="email" class="nav-item nav-link" (click)="handleSignOut()" >SignOut</a>
+        </div>
+   </div>
+</nav>
+
